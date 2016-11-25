@@ -27,6 +27,6 @@ assign spi_miso = 1'bz;
 assign avr_rx = 1'bz;
 assign spi_channel = 4'bzzzz;
 
-assign led = 8'b0;
-
+assign led[6:0] = 7'b0;
+assign led[7] = rst;
 endmodule
