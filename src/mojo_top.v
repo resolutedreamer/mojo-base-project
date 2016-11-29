@@ -27,22 +27,10 @@ module mojo_top(
 	assign avr_rx = 1'bz;
 	assign spi_channel = 4'bzzzz;
 	
-	wire [7:0] compare;
-	wire pwm;
-	
-	counter fancyCounter (
-		.rst(rst),
+	led_wave(
 		.clk(clk),
-		.value(compare)
-	);
-	
-	pwm #(.CTR_LEN(8)) fancyPWM (
 		.rst(rst),
-		.clk(clk),
-		.compare(compare),
-		.pwm(pwm)
+		.led(led)
 	);
-
-	assign led = {8{pwm}};
 
 endmodule
