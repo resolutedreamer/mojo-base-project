@@ -29,4 +29,6 @@ assign spi_channel = 4'bzzzz;
 
 assign led = 8'b0;
 
+sevensegmentdisplay firstDigit ()
+
 endmodule
